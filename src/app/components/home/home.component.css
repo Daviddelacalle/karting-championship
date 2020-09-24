@@ -1,0 +1,12 @@
+h1 {
+    font-weight: lighter;
+}
+
+.table {
+    width: 30vw;
+}
+
+.table td,
+.table th {
+    text-align: center;
+}

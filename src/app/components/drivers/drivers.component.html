@@ -1,0 +1,68 @@
+<h1> Personal Information </h1>
+<div class="card mb-8 animated fadeIn fast">
+    <div class="row no-gutters">
+        <div class="col-md-3">
+            <img [src]="driver.picture" class="card-img" [alt]="driver.name">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <p class="card-text"><b>Name:</b> {{ driver.name }}</p>
+                <p class="card-text"><b>Team:</b> {{ driver.team }}</p>
+                <p class="card-text"><b>Age:</b> {{ driver.age}}</p>
+                <ng-container *ngFor="let winner of ganadores | keyvalue: asIsOrder;let i = index">
+                    <ng-container *ngIf="winner.key == driver._id">
+                        <p class=" card-text "><b>Points:</b> {{ winner.value}}</p>
+                        <p class="card-text "><b>Position:</b> {{ i + 1 }}</p>
+                    </ng-container>
+                </ng-container>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <ng-container *ngFor="let winner of ganadores | keyvalue: asIsOrder;let i = index">
+                <ng-container *ngIf="winner.key == driver._id">
+                    <p class="card-text position">{{ i + 1 }}</p>
+                </ng-container>
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+<h1>Races </h1>
+
+<table class="table table-striped table-hover animated fadeIn fast">
+    <thead>
+        <tr>
+            <th scope="col "></th>
+            <th *ngFor="let race of timeRaces | keyvalue " scope="col "> {{ race.key }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row ">Position</th>
+
+            <ng-container *ngFor="let race of timeRaces | keyvalue ">
+                <ng-container *ngFor="let item of race.value ">
+                    <ng-container *ngIf="driver._id==item[0] ">
+                        <td> {{item[5]}}</td>
+                    </ng-container>
+                </ng-container>
+            </ng-container>
+        </tr>
+        <tr>
+            <th scope="row ">Time</th>
+
+            <ng-container *ngFor="let race of timeRaces | keyvalue ">
+                <ng-container *ngFor="let item of race.value ">
+                    <ng-container *ngIf="driver._id==item[0] ">
+                        <td> {{item[2]}}</td>
+                    </ng-container>
+                </ng-container>
+            </ng-container>
+        </tr>
+    </tbody>
+</table>
+
+<div id="pagination">
+    <button *ngIf="lastDriver != 'out'" (click)="seeDriver(lastDriver)" type=" button " class="btn btn-outline-dark "> Last</button>
+    <button *ngIf="nextDriver != 'out'" (click)="seeDriver(nextDriver)" type=" button " class="btn btn-outline-dark "> Next</button>
+</div>

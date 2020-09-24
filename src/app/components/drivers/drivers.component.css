@@ -1,0 +1,26 @@
+h1 {
+    padding: 10px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.table td,
+.table th {
+    text-align: center;
+}
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+button {
+    margin: 10px;
+}
+
+.position {
+    text-align: center;
+    font-size: 50px;
+    border: solid 2px #404040;
+}

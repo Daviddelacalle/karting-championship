@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light bg-faded ">
+
+    <a class="navbar-brand" [routerLink]="['home']">
+        <img src="assets/img/kart-logo.png" width="60" height="60" alt="" loading="lazy">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+            <!-- active -->
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['home']">Global Ranking</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['ranking-races']">Races Ranking</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['time-races']">Times</a>
+            </li>
+
+
+        </ul>
+    </div>
+</nav>
+
+<div class="container animated fadeIn fast" *ngIf="router.url == '/home' || router.url == '/ranking-races' || router.url == '/time-races'">
+    <h1 class="display-4">Karting World Championship</h1>
+</div>
