@@ -14,32 +14,3 @@
         </tr>
     </tbody>
 </table>
-
-
-<!-- <div class="container">
-    <h1 class="display-4">Karting World Championship</h1>
-</div>
-
-<table class="table table-striped table-hover">
-    <thead>
-        <tr>
-            <th scope="col" class="position">Pos</th>
-            <th scope="col">Drivers</th>
-            <th *ngFor="let race of timeRaces | keyvalue" scope="col"> {{ race.key }}</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let winner of ganadores | keyvalue: asIsOrder; let i = index">
-            <th scope="row">{{ i + 1 }}</th>
-            <td>{{ winner.key }}</td>
-            <ng-container *ngFor="let race of timeRaces | keyvalue; let j = index">
-                <ng-container *ngFor="let item of race.value">
-                    <ng-container *ngIf="winner.key == item[0]">
-                        <td>{{item[1]}}</td>
-
-                    </ng-container>
-                </ng-container>
-            </ng-container>
-        </tr>
-    </tbody>
-</table> -->
