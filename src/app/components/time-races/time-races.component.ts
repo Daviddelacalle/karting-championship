@@ -26,7 +26,7 @@ export class TimeRacesComponent implements OnInit, OnDestroy{
         this.timeout = setTimeout(()=>{                           
             this.router.navigate(['/home']);
             
-        }, 10000);
+        }, 4000);
 
   }
   ngOnDestroy(){

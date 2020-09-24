@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit, OnDestroy{
         this.timeout = setTimeout(()=>{                           
             this.router.navigate(['/ranking-races']);
             
-       }, 10000);
+       }, 4000);
 
     }
 

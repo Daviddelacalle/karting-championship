@@ -26,7 +26,7 @@ export class RankingRacesComponent implements OnInit, OnDestroy{
         this.timeout = setTimeout(()=>{                           
             this.router.navigate(['/time-races']);
            
-       }, 10000);
+       }, 4000);
     }
     
     ngOnDestroy(){
